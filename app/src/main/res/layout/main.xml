@@ -1,12 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMARTfit"
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/futura_condensed"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World" />
-</LinearLayout>
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/icon_account_circle"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Username"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/futura_condensed"
+            android:id="@+id/username_input"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:inputType="textPassword"
+            android:fontFamily="@font/futura_condensed"
+            android:id="@+id/password_input"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/black_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/rounded_corner_black"
+            android:padding="18dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:fontFamily="@font/futura_condensed" />
+
+    </LinearLayout>
+
+</RelativeLayout>
