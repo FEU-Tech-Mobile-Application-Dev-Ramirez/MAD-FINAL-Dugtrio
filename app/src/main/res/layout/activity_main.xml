@@ -61,6 +61,19 @@
             android:id="@+id/password_input"
             android:layout_gravity="center" />
 
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
         <Button
             android:id="@+id/black_button"
             android:layout_width="match_parent"
