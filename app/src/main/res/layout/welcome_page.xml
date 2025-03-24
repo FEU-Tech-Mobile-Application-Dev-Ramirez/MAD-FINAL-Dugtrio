@@ -1,84 +1,97 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:id="@+id/welcomeLayout"> <!-- Root Layout for Animations -->
 
-    <VideoView
-        android:id="@+id/videoView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@android:color/black"
+        tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/smartfit_logo_white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/appName"
-        android:layout_width="170dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="688dp"
-        android:fontFamily="@font/futura"
-        android:text="Smart Fit App"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/smartfit_logo_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tagline"
-        android:layout_width="350dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="728dp"
-        android:fontFamily="@font/futura"
-        android:gravity="left"
-        android:text="Your space for wellness, your journey. Move with us."
-        android:textColor="#A9A9A9"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:fontFamily="@font/futura"
+            android:text="Smart Fit App"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/white_button_joinus"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rounded_corner_white"
-        android:fontFamily="@font/futura_bold"
-        android:text="JOIN US"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/futura"
+            android:gravity="center"
+            android:text="Your space for wellness, your journey. Move with us."
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appName" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/white_transparent_button_signin"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rounded_corner_transparent_white"
-        android:fontFamily="@font/futura_bold"
-        android:text="SIGN IN"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/white_button_joinus"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_corner_white"
+                android:fontFamily="@font/futura_bold"
+                android:text="JOIN US"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/white_transparent_button_signin"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_corner_transparent_white"
+                android:fontFamily="@font/futura_bold"
+                android:text="SIGN IN"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
