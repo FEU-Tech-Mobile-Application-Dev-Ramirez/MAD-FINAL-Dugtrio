@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.welcome_page)
 
         val videoView = findViewById<VideoView>(R.id.videoView)
-        val videoPath = "android.resource://$packageName/raw/welcome_video"
+        val videoPath = "android.resource://$packageName/raw/working_out_video"
         videoView.setVideoURI(Uri.parse(videoPath))
         videoView.start()
         videoView.setOnPreparedListener { it.isLooping = true }
@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.white_transparent_button_signin).setOnClickListener {
             showLoginPage()
+        }
+
+        // New Button to show Privacy and Terms
+        findViewById<TextView>(R.id.tvPrivacyTermsLink).setOnClickListener {
+            showPrivacyTermsPage()
         }
     }
 
@@ -107,6 +112,17 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tvSignUpLink).setOnClickListener {
             showSigninPage()
+        }
+    }
+
+    private fun showPrivacyTermsPage() {
+        setContentView(R.layout.privacy_terms_page)
+
+        val privacyLayout = findViewById<LinearLayout>(R.id.privacyLayout)
+        applySlideAnimation(privacyLayout)
+
+        findViewById<ImageView>(R.id.ivBack).setOnClickListener {
+            showWelcomePage()
         }
     }
 
