@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:context=".MainActivity"
+            tools:ignore="ExtraText">
+
+            <ImageView
+                android:id="@+id/imageView_terms"
+                android:layout_width="100dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="156dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/smartfit_logo_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use"
+                android:layout_width="326dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/futura"
+                android:text="SMART FIT TERMS OF USE"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_terms"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="46dp" />
+
+            <TextView
+                android:id="@+id/What_Terms_of_Use1"
+                android:layout_width="248dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/futura"
+                android:text="What is a Terms of Use?"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="27dp" />
+
+
+            <TextView
+                android:id="@+id/What_Terms_of_Use2"
+                android:layout_width="377dp"
+                android:layout_height="352dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="A Terms of Use agreement (also known as Terms and Conditions or Terms of Service) is a legal document that defines the rules, guidelines, and acceptable use of an application or service. It serves as a contract between the application provider and its users, outlining the rights, responsibilities, and limitations of both parties.\n\nFor Smart Fit, the Terms of Use ensure that users understand the conditions under which they can access and use the application. It provides clear guidelines on how users should interact with the app and establishes the consequences for violating these terms.\n\n By agreeing to the Terms of Use, users acknowledge their understanding of the policies and their commitment to complying with them, ensuring a safe and positive experience for all."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/What_Terms_of_Use1"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="27dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use1"
+                android:layout_width="276dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/futura"
+                android:text="Terms of Use for Smart Fit"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/What_Terms_of_Use2"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="27dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use2"
+                android:layout_width="151dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/futura"
+                android:text="1. Introduction"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use1"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use3"
+                android:layout_width="384dp"
+                android:layout_height="103dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="Welcome to Smart Fit! These Terms of Use govern your access and use of our mobile application (“App”). By downloading, installing, or using Smart Fit, you agree to comply with and be bound by these terms. If you do not agree with these terms, please refrain from using the app."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use2"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+
+            <TextView
+                android:id="@+id/Terms_of_Use4"
+                android:layout_width="181dp"
+                android:layout_height="34dp"
+                android:fontFamily="@font/futura"
+                android:text="2. User Eligibility"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use3"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use5"
+                android:layout_width="383dp"
+                android:layout_height="145dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-6dp"
+                android:text="•To use Smart Fit, you must:\n\n•Be at least 13 years old. If you are under 18, you may use the app under the supervision of a parent or guardian.\n\n•Provide accurate and complete information during registration.\n\n•Agree to these terms and comply with applicable laws."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use4"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use6"
+                android:layout_width="246dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/futura"
+                android:text="3. Account Registration and Security"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use5"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use7"
+                android:layout_width="384dp"
+                android:layout_height="134dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-6dp"
+                android:text="•You are responsible for maintaining the confidentiality of your login credentials.\n\n•You Agree to notify us immediately if you suspect unauthorized access or use of your account.\n\n•Smart Fit is not liable for any loss or damage arising from unauthorized account access."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use6"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use8"
+                android:layout_width="208dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/futura"
+                android:text="4. Use of Smart Fit"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use7"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use9"
+                android:layout_width="378dp"
+                android:layout_height="132dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-6dp"
+                android:text="When using Smart Fit, you agree to:\n\n•Use the app only for lawful purposes.\n\n•Avoid engaging in any activity that could interfere with the functionality or security of the app.\n\n•Refrain from sharing inappropriate or offensive content."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use8"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use10"
+                android:layout_width="238dp"
+                android:layout_height="34dp"
+                android:fontFamily="@font/futura"
+                android:text="5. Prohibited Conduct"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use9"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use11"
+                android:layout_width="376dp"
+                android:layout_height="116dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-6dp"
+                android:text="You agree not to:\n\n•Attempt to reverse-engineer, modify, or hack the app.\n\n•Violate any applicable laws or regulations.\n\n•Use Smart Fit to distribute spam or harmful content."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use10"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use12"
+                android:layout_width="238dp"
+                android:layout_height="34dp"
+                android:fontFamily="@font/futura"
+                android:text="6. Intellectual Property"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use11"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use13"
+                android:layout_width="383dp"
+                android:layout_height="89dp"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="All content, including but not limited to text, graphics, logos, and software, is the property of Smart Fit and is protected by intellectual property laws. You may not reproduce, distribute, or modify any content without prior written consent."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use11"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use14"
+                android:layout_width="137dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="68dp"
+                android:fontFamily="@font/futura"
+                android:text="Contact Us"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use13"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp" />
+
+            <TextView
+                android:id="@+id/Terms_of_Use15"
+                android:layout_width="378dp"
+                android:layout_height="155dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="If you have any questions or concerns regarding these Terms of Use, please contact us at:\n\nEmail: support@smartfitapp.com\n\nAddress: Smart Fit Technologies, 1234 Fitness Avenue, Suite 500, Los Angeles, CA 90001, USA"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use14"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="23dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAgree"
+                android:layout_width="206dp"
+                android:layout_height="53dp"
+                android:layout_marginHorizontal="32dp"
+                android:background="@drawable/rounded_corner_black"
+                android:fontFamily="@font/futura_bold"
+                android:text="I Agree"
+                android:textColor="@android:color/white"
+                tools:ignore="HardcodedText,MissingConstraints"
+                tools:layout_editor_absoluteX="102dp"
+                tools:layout_editor_absoluteY="1920dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>

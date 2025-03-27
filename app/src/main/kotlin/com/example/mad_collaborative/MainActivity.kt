@@ -43,10 +43,6 @@ class MainActivity : AppCompatActivity() {
             showLoginPage()
         }
 
-        // New Button to show Privacy and Terms
-        findViewById<TextView>(R.id.tvPrivacyTermsLink).setOnClickListener {
-            showPrivacyTermsPage()
-        }
     }
 
     private fun showSigninPage() {
@@ -112,17 +108,6 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tvSignUpLink).setOnClickListener {
             showSigninPage()
-        }
-    }
-
-    private fun showPrivacyTermsPage() {
-        setContentView(R.layout.privacy_terms_page)
-
-        val privacyLayout = findViewById<LinearLayout>(R.id.privacyLayout)
-        applySlideAnimation(privacyLayout)
-
-        findViewById<ImageView>(R.id.ivBack).setOnClickListener {
-            showWelcomePage()
         }
     }
 

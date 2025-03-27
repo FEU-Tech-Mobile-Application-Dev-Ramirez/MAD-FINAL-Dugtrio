@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:context=".MainActivity"
+            tools:ignore="ExtraText">
+
+            <ImageView
+                android:id="@+id/imageView_privacyandterms"
+                android:layout_width="100dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/smartfit_logo_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Privacy_Policy"
+                android:layout_width="354dp"
+                android:layout_height="81dp"
+                android:fontFamily="@font/futura"
+                android:text="SMART FIT PRIVACY POLICY AND COOKIE POLICY"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_privacyandterms"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="28dp" />
+
+            <TextView
+                android:id="@+id/What_Privacy_Policy"
+                android:layout_width="261dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/futura"
+                android:text="What is a Privacy Policy?"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Privacy_Policy"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy1"
+                android:layout_width="374dp"
+                android:layout_height="88dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="A Privacy Policy is a legal document that explains how an application, website, or service collects, processes, stores, and protects the personal data of its users. It provides transparency by informing users about:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/What_Privacy_Policy"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy2"
+                android:layout_width="378dp"
+                android:layout_height="92dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-9dp"
+                android:text="•What data is collected.\n\n•Why the data is collected.\n\n•How the data is used and stored.\n\n•Whether the data is shared with third parties."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy1"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy3"
+                android:layout_width="379dp"
+                android:layout_height="69dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="For Smart Fit, a fitness application designed to help users achieve their fitness goals, the Privacy Policy outlines how we manage personal information, including:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy2"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy4"
+                android:layout_width="379dp"
+                android:layout_height="126dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-6dp"
+                android:text="•User registration details such as name, email, and password.\n\n•Fitness and health-related data (such as workout routines and progress).\n\n•Device and usage information to improve app functionality."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy3"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/What_Cookie_Policy"
+                android:layout_width="261dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/futura"
+                android:text="What is a Cookie Policy?"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy4"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy5"
+                android:layout_width="376dp"
+                android:layout_height="110dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="A Cookie Policy explains how cookies and similar technologies are used to enhance the user experience. Cookies are small text files stored on a user’s device that help websites or applications remember user preferences and track app usage."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/What_Cookie_Policy"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy6"
+                android:layout_width="192dp"
+                android:layout_height="23dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="For Smart Fit, cookies help us:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy5"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy7"
+                android:layout_width="374dp"
+                android:layout_height="97dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="-6dp"
+                android:text="•Improve app performance by analyzing usage patterns.\n\n•Personalize your experience by remembering preferences.\n\n•Provide targeted content and advertisements."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy6"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/Explain_Privacy_Policy8"
+                android:layout_width="375dp"
+                android:layout_height="68dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="By providing a Cookie Policy, Smart Fit ensures that users are aware of the cookies being used and gives them the ability to manage their preferences."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy7"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/Privacy_Policy1"
+                android:layout_width="283dp"
+                android:layout_height="41dp"
+                android:fontFamily="@font/futura"
+                android:text="Privacy Policy for Smart Fit"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Explain_Privacy_Policy8"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/Privacy_Policy2"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/futura"
+                android:text="1. Introduction"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/Privacy_Policy1"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <TextView
+                android:id="@+id/Privacy_Policy3"
+                android:layout_width="375dp"
+                android:layout_height="177dp"
+                android:fontFamily="@font/futura"
+                android:justificationMode="inter_word"
+                android:text="At Smart Fit, we value your privacy and are committed to protecting your personal information. This Privacy Policy describes how we collect, use, and protect your data when you use our mobile application (“App”).\n\nBy accessing and using Smart Fit, you agree to the terms outlined in this Privacy Policy. If you do not agree with these terms, please refrain from using the App."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/Privacy_Policy2"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="19dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAgree"
+                android:layout_width="206dp"
+                android:layout_height="53dp"
+                android:layout_marginHorizontal="32dp"
+                android:background="@drawable/rounded_corner_black"
+                android:fontFamily="@font/futura_bold"
+                android:text="I Agree"
+                android:textColor="@android:color/white"
+                tools:ignore="HardcodedText,MissingConstraints"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="1631dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>

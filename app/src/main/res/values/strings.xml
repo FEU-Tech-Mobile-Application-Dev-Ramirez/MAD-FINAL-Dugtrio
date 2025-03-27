@@ -4,22 +4,4 @@
     <string name="underlined_tvLoginLink_text"><u>Already have an account? Sign In.</u></string>
     <string name="underlined_signup_text"><u>Don\'t have an account? Sign Up.</u></string>
     <string name="underlined_PrivacyandTerms_text">By continuing, I agree to Smartfit\'s <u>Privacy Policy</u> and <u>Terms of Use.</u></string>
-    <string name="privacy_terms_content">
-    Welcome to SmartFit! Your privacy is important to us. This Privacy Policy outlines how we collect, use, and safeguard your information.\n\n
-    <b>Privacy Policy:</b>\n
-    1. <b>Information Collection:</b>\n
-    - We collect personal information such as name, email, and usage data to improve your experience.\n\n
-    2. <b>Use of Information:</b>\n
-    - Your information is used to provide a seamless experience and improve our services.\n\n
-    3. <b>Data Security:</b>\n
-    - We implement strict security measures to protect your data from unauthorized access.\n\n
-    <b>Terms of Use:</b>\n
-    1. <b>Usage Guidelines:</b>\n
-    - You agree to use SmartFit in compliance with applicable laws.\n\n
-    2. <b>Intellectual Property:</b>\n
-    - All content within SmartFit is protected by copyright and cannot be reused without permission.\n\n
-    3. <b>Termination:</b>\n
-    - SmartFit reserves the right to terminate accounts that violate these terms.\n\n
-    For more information, please contact us at <a href="mailto:support@smartfit.com">support@smartfit.com</a>.
-</string>
 </resources>
