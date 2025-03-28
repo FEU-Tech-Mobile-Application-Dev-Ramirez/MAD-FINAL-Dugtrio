@@ -28,16 +28,11 @@
             </intent-filter>
         </activity>
 
-
-
-
-
-
-
+        <activity
+            android:name=".MainPageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MADCollaborative" />
 
     </application>
 
-
-
 </manifest>
-

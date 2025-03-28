@@ -286,9 +286,18 @@
                 android:fontFamily="@font/futura_bold"
                 android:text="I Agree"
                 android:textColor="@android:color/white"
-                tools:ignore="HardcodedText,MissingConstraints"
-                tools:layout_editor_absoluteX="102dp"
-                tools:layout_editor_absoluteY="1920dp" />
+
+                app:layout_constraintTop_toBottomOf="@id/Terms_of_Use14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                />
+
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

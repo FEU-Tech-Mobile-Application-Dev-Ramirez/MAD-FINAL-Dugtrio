@@ -49,6 +49,12 @@ class FirestoreHelper(private val context: Context) {
                 if (task.isSuccessful) {
                     Log.d("Auth", "Login successful!")
                     Toast.makeText(context, "Login Successful!", Toast.LENGTH_SHORT).show()
+
+                    // ✅ Use Intent to Navigate to MainPageActivity
+                    val intent = android.content.Intent(context, com.example.mad_collaborative.MainPageActivity::class.java)
+                    intent.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    context.startActivity(intent)
+
                     onSuccess(true) // ✅ Call success callback
                 } else {
                     Log.e("Auth", "Login failed", task.exception)
@@ -57,4 +63,5 @@ class FirestoreHelper(private val context: Context) {
                 }
             }
     }
+
 }
