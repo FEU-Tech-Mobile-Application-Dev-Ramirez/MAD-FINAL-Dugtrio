@@ -9,6 +9,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mad_collaborative.utils.FirestoreHelper
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var firestoreHelper: FirestoreHelper

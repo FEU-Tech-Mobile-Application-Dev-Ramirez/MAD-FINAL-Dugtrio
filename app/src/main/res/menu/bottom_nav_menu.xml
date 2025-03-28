@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title="Home"/>
+    <item
+        android:id="@+id/workouts"
+        android:icon="@drawable/workout_icon"
+        android:title="Workouts"/>
+    <item
+        android:id="@+id/activity"
+        android:icon="@drawable/activity_icon"
+        android:title="Activity"/>
+    <item
+        android:id="@+id/programs"
+        android:icon="@drawable/programs_icon"
+        android:title="Programs"/>
+</menu>

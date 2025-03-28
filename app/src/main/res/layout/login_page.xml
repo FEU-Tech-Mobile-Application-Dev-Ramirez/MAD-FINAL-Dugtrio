@@ -37,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.371"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,TextSizeCheck"
             tools:layout_editor_absoluteY="123dp" />
 
         <TextView
@@ -53,7 +53,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.106"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
+            tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck"
             tools:layout_editor_absoluteY="216dp" />
 
         <TextView
@@ -69,7 +69,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.322"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,TextContrastCheck"
             tools:layout_editor_absoluteY="216dp" />
 
         <EditText
@@ -87,7 +87,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.562"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/edtPasswordLogin"
@@ -145,7 +146,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.287"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,TextContrastCheck,TextSizeCheck"
             tools:layout_editor_absoluteY="416dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
