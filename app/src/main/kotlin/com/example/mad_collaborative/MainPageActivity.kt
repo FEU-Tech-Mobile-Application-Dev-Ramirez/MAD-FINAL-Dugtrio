@@ -10,16 +10,5 @@ class MainPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-
-        toolbar.title = "Workouts"
-
-        bottomNav.setOnItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.nav_home -> true
-                else -> false
-            }
-        }
     }
 }

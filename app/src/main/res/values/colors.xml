@@ -7,12 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-        <!-- Colors for icons -->
-        <color name="selected_icon_color">#000000</color> <!-- Black for selected -->
-        <color name="unselected_icon_color">#808080</color> <!-- Gray for unselected -->
-
-        <!-- Colors for text -->
-        <color name="selected_text_color">#000000</color> <!-- Black for selected -->
-        <color name="unselected_text_color">#808080</color> <!-- Gray for unselected -->
-
+    <color name="highlightColor">#000000</color> <!-- Example: Orange for highlight -->
+    <color name="defaultColor">#808080</color> <!-- Example: Gray for default -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="secondaryColor">#03DAC5</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="bottomNavColor">#F5F5F5</color>
+    <color name="bottom_nav_selected">#000000</color> <!-- Black -->
+    <color name="bottom_nav_unselected">#808080</color> <!-- Gray -->
 </resources>
