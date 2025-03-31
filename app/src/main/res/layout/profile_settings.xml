@@ -154,22 +154,26 @@
         android:id="@+id/Arrow_Right_1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="84dp"
         android:src="@drawable/arrow_right_icon"
         android:translationX="5dp"
         app:layout_constraintBottom_toTopOf="@+id/arrow_Right_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/line_2" />
 
     <ImageView
         android:id="@+id/arrow_Right_"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="56dp"
         android:src="@drawable/arrow_right_icon"
         android:translationX="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/line_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/line_3" />
 
     <TextView
@@ -218,7 +222,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/Arrow_Right_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintHorizontal_bias="0.359"
         app:layout_constraintStart_toEndOf="@+id/line_1"
         tools:ignore="MissingConstraints,TextSizeCheck" />
 
