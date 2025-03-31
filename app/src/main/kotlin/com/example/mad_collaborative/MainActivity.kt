@@ -3,20 +3,22 @@ package com.example.mad_collaborative
 import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.ClickableSpan
-import android.text.method.LinkMovementMethod
-import android.view.View
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.mad_collaborative.utils.FirestoreHelper
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,14 +26,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.welcome_page) // Ensure layout is set
-        firestoreHelper = FirestoreHelper(this) // Initialize Firestore Helper
+        setContentView(R.layout.main_page)
+        firestoreHelper = FirestoreHelper(this)
 
-        // Delay to ensure UI is fully rendered before setting up views
         Handler(Looper.getMainLooper()).postDelayed({
             showWelcomePage()
         }, 100)
-
     }
 
     private fun showWelcomePage() {
@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.white_transparent_button_signin).setOnClickListener {
             showLoginPage()
         }
-
     }
 
     private fun showSigninPage() {
@@ -70,7 +69,6 @@ class MainActivity : AppCompatActivity() {
         val regionTextView = findViewById<TextView>(R.id.Region)
         val changeRegionTextView = findViewById<TextView>(R.id.Changeregion)
 
-        // Handle Privacy Policy and Terms of Use links
         val fullText = "By continuing, I agree to SmartFit's Privacy Policy and Terms of Use"
         val privacyPolicy = "Privacy Policy"
         val termsOfUse = "Terms of Use"
@@ -101,7 +99,6 @@ class MainActivity : AppCompatActivity() {
         privacyAndTermsTextView.movementMethod = LinkMovementMethod.getInstance()
         privacyAndTermsTextView.highlightColor = Color.TRANSPARENT
 
-        // ✅ Handle Region Selection
         changeRegionTextView.setOnClickListener {
             showRegionSelectionDialog(regionTextView)
         }
@@ -130,37 +127,34 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // ✅ Function to Show Region Selection Dialog
     private fun showRegionSelectionDialog(regionTextView: TextView) {
         val regions = arrayOf("Philippines", "US", "Canada", "UK", "Australia", "Japan", "Germany")
 
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Select Your Region")
         builder.setItems(regions) { _, which ->
-            regionTextView.text = regions[which] // Update the region TextView
+            regionTextView.text = regions[which]
         }
         builder.show()
     }
 
     private fun showPrivacyPolicyPage() {
-        setContentView(R.layout.privacy_policy_page) // Switches to Privacy Policy page
+        setContentView(R.layout.privacy_policy_page)
 
-        val btnAgree = findViewById<Button>(R.id.btnAgree) // Ensure this button exists in XML
+        val btnAgree = findViewById<Button>(R.id.btnAgree)
         btnAgree.setOnClickListener {
-            showSigninPage() // Takes user back to sign-in page
+            showSigninPage()
         }
     }
 
     private fun showTermsOfUsePage() {
-        setContentView(R.layout.terms_use_page) // Switches to Terms of Use page
+        setContentView(R.layout.terms_use_page)
 
-        val btnAgree = findViewById<Button>(R.id.btnAgree) // Ensure this button exists in XML
+        val btnAgree = findViewById<Button>(R.id.btnAgree)
         btnAgree.setOnClickListener {
-            showSigninPage() // Takes user back to sign-in page
+            showSigninPage()
         }
     }
-
-
 
     private fun showLoginPage() {
         setContentView(R.layout.login_page)
@@ -175,12 +169,10 @@ class MainActivity : AppCompatActivity() {
         val regionTextView = findViewById<TextView>(R.id.Region)
         val changeRegionTextView = findViewById<TextView>(R.id.Changeregion)
 
-        // Handle region selection
         changeRegionTextView.setOnClickListener {
             showRegionSelectionDialog(regionTextView)
         }
 
-        // Handle Privacy Policy and Terms of Use links
         val fullText = "By continuing, I agree to SmartFit's Privacy Policy and Terms of Use"
         val privacyPolicy = "Privacy Policy"
         val termsOfUse = "Terms of Use"
@@ -230,20 +222,54 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
     private fun showMainPage() {
         val intent = Intent(this, MainPageActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-
-
-
     private fun applySlideAnimation(view: LinearLayout) {
         val slideAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_right)
         view.startAnimation(slideAnimation)
     }
+}
 
+class MainPage : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.main_page, container, false)
+
+        // Set default fragment only if there's no saved instance
+        if (savedInstanceState == null) {
+            replaceFragment(HomeFragment())
+        }
+
+        // Setup Bottom Navigation Clicks
+        setupBottomNavigation(view)
+
+        return view
+    }
+
+    private fun setupBottomNavigation(view: View) {
+        val bottomNavigationView = view.findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> replaceFragment(HomeFragment())
+                R.id.workouts -> replaceFragment(WorkoutsFragment())
+                R.id.activity -> replaceFragment(ActivityFragment())
+                R.id.programs -> replaceFragment(ProgramsFragment())
+                else -> return@setOnItemSelectedListener false
+            }
+            true
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.frame_layout_1, fragment)
+            .commit()
+    }
 }

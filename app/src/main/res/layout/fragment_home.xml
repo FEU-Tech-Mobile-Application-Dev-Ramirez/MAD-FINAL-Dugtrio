@@ -1,0 +1,217 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".HomeFragment">
+
+        <TextView
+            android:id="@+id/Home_1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Home"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/Whats_New"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/Whats_New"
+            android:layout_width="143dp"
+            android:layout_height="33dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="What's New"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/Whats_New_2"
+            tools:ignore="MissingConstraints,TextSizeCheck"
+            tools:layout_editor_absoluteX="28dp" />
+
+        <TextView
+            android:id="@+id/Whats_New_2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:fontFamily="@font/arial"
+            android:gravity="start"
+            android:text="Check out the latest from Smartfit."
+            android:textAlignment="center"
+            android:textColor="#808080"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.197"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints,TextContrastCheck"
+            tools:layout_editor_absoluteY="89dp" />
+
+        <TextView
+            android:id="@+id/View_All"
+            android:layout_width="77dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/arial"
+            android:gravity="start"
+            android:text="View All"
+            android:textAlignment="center"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintStart_toEndOf="@+id/Whats_New"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,TextContrastCheck" />
+
+
+        <ImageView
+            android:id="@+id/Food_Calories_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="28dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/food_calories"
+            app:layout_constraintBottom_toTopOf="@+id/Smartfit_logo_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Whats_New_2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/empty_calories_2"
+            android:layout_width="252dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="172dp"
+            android:fontFamily="@font/futura_bold"
+            android:gravity="start"
+            android:text="WHAT ARE EMPTY CALORIES?"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/Whats_New_2"
+            tools:ignore="MissingConstraints,TextSizeCheck"
+            tools:layout_editor_absoluteX="23dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Read_Now_btn_1"
+            android:layout_width="97dp"
+            android:layout_height="29dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/rounded_corner_white"
+            android:fontFamily="@font/futura_bold"
+            android:text="Read Now"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/sports_art_1"
+            app:layout_constraintTop_toBottomOf="@+id/empty_calories_2"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="23dp" />
+
+
+        <ImageView
+            android:id="@+id/sports_art_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sports_art"
+            app:layout_constraintBottom_toTopOf="@+id/Smartfit_logo_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Food_Calories_1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/sports_art_2"
+            android:layout_width="227dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/futura_bold"
+            android:gravity="start"
+            android:text="IS SPORTS GOOD FOR YOU?"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            app:layout_constraintTop_toBottomOf="@+id/Read_Now_btn_1"
+            tools:ignore="MissingConstraints,TextSizeCheck"
+            tools:layout_editor_absoluteX="23dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/read_Now_btn_2"
+            android:layout_width="97dp"
+            android:layout_height="29dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/rounded_corner_white"
+            android:fontFamily="@font/futura_bold"
+            android:text="Read Now"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/Smartfit_logo_1"
+            app:layout_constraintTop_toBottomOf="@+id/sports_art_2"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="23dp" />
+
+        <TextView
+            android:id="@+id/looking_for_more"
+            android:layout_width="225dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Looking for More? \nLet's do a workout!"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/Explore_Workout_btn"
+            tools:ignore="MissingConstraints,TextSizeCheck"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <ImageView
+            android:id="@+id/Smartfit_logo_1"
+            android:layout_width="67dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/smartfit_logo_black"
+            android:translationX="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/looking_for_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Explore_Workout_btn"
+            android:layout_width="181dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/rounded_corner_black"
+            android:fontFamily="@font/futura_bold"
+            android:text="Explore Workouts"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
