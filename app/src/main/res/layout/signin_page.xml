@@ -44,16 +44,14 @@
             android:id="@+id/Region"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginEnd="73dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/futura"
             android:gravity="start"
             android:text="Philippines"
             android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@+id/Changeregion"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Changeregion"
             app:layout_constraintTop_toBottomOf="@+id/Signupline"
             tools:ignore="MissingConstraints" />
 
@@ -61,17 +59,16 @@
             android:id="@+id/Changeregion"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/futura"
             android:gravity="start"
             android:text="@string/underlined_Changeregion_text"
             android:textAlignment="viewStart"
             android:textColor="#808080"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.322"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Signupline"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp" />
 
         <EditText
             android:id="@+id/edtFirstName"
@@ -188,17 +185,16 @@
             android:layout_width="237dp"
             android:layout_height="40dp"
             android:layout_marginTop="34dp"
+            android:clickable="true"
+            android:focusable="true"
             android:text="@string/underlined_PrivacyandTerms_text"
             android:textColor="#808080"
             android:textSize="14sp"
-            android:clickable="true"
-            android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.247"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ConfirmPassword"
             tools:ignore="MissingConstraints" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -282,22 +282,17 @@
                 android:layout_width="206dp"
                 android:layout_height="53dp"
                 android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="36dp"
                 android:background="@drawable/rounded_corner_black"
                 android:fontFamily="@font/futura_bold"
                 android:text="I Agree"
+
                 android:textColor="@android:color/white"
-
-                app:layout_constraintTop_toBottomOf="@id/Terms_of_Use14"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="32dp"
-                />
-
-
-
-
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use15"
+                app:layout_constraintVertical_bias="0.146" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
