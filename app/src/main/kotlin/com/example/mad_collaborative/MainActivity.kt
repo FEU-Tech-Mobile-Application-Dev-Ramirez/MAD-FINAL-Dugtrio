@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page)
+
         firestoreHelper = FirestoreHelper(this)
 
         Handler(Looper.getMainLooper()).postDelayed({
@@ -231,45 +232,5 @@ class MainActivity : AppCompatActivity() {
     private fun applySlideAnimation(view: LinearLayout) {
         val slideAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_in_right)
         view.startAnimation(slideAnimation)
-    }
-}
-
-class MainPage : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.main_page, container, false)
-
-        // Set default fragment only if there's no saved instance
-        if (savedInstanceState == null) {
-            replaceFragment(HomeFragment())
-        }
-
-        // Setup Bottom Navigation Clicks
-        setupBottomNavigation(view)
-
-        return view
-    }
-
-    private fun setupBottomNavigation(view: View) {
-        val bottomNavigationView = view.findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> replaceFragment(HomeFragment())
-                R.id.workouts -> replaceFragment(WorkoutsFragment())
-                R.id.activity -> replaceFragment(ActivityFragment())
-                R.id.programs -> replaceFragment(ProgramsFragment())
-                else -> return@setOnItemSelectedListener false
-            }
-            true
-        }
-    }
-
-    private fun replaceFragment(fragment: Fragment) {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.frame_layout_1, fragment)
-            .commit()
     }
 }

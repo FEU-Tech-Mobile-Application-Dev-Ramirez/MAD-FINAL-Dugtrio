@@ -15,4 +15,8 @@
         android:id="@+id/programs"
         android:icon="@drawable/programs_icon"
         android:title="Programs"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile"/>
 </menu>
