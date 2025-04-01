@@ -1,17 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgramsFragment">
+    android:fillViewport="true"
+    android:background="#303030">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Programs"
-        android:textColor="@android:color/black"
-        android:textAlignment="center"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/ProgramMain_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="266dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Programs"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/Program_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Program_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="#222222"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ProgramMain_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Image Background -->
+                <ImageView
+                    android:id="@+id/program_workout_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/program_workout1"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Text Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#404040"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/Program_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura"
+                        android:text="Flow for Growth"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Program_description1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Stretch out and reach inwards as you grow your practice, one flow at a time."
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Program_duration1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="2–3 weeks, bodyweight only"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Second CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Program_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="#222222"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Program_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Image Background -->
+                <ImageView
+                    android:id="@+id/program_workout_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/program_workout2" />
+
+                <!-- Text Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#404040"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/Program_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura"
+                        android:text="Strength and Conditioning"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Program_description2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Build strength and endurance with this comprehensive program."
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Program_duration2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="4–6 weeks, mixed equipment"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Third CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Program_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="60dp"
+            app:cardBackgroundColor="#222222"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Program_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Image Background -->
+                <ImageView
+                    android:id="@+id/program_workout_image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/program_workout3" />
+
+                <!-- Text Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#404040"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/Program_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura"
+                        android:text="Cardio Blast"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Program_description3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Boost your cardiovascular fitness with high-intensity workouts."
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Program_duration3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="3–4 weeks, no equipment"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

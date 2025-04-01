@@ -15,7 +15,7 @@ class HomeFragmentNew : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         // Example: Interacting with TextViews and Buttons
-        val homeTitleTextView: TextView = view.findViewById(R.id.Home_1)
+        val homeTitleTextView: TextView = view.findViewById(R.id.HomeMain)
         val whatsNewTextView: TextView = view.findViewById(R.id.Whats_New)
         val viewAllTextView: TextView = view.findViewById(R.id.View_All)
         val readNowButton1: Button = view.findViewById(R.id.Read_Now_btn_1)
@@ -25,10 +25,6 @@ class HomeFragmentNew : Fragment(R.layout.fragment_home) {
         homeTitleTextView.setOnClickListener {
             // You can add some logic here for when the Home Title is clicked
         }
-
-        // Example Logic: Set dynamic text to what's new and Home title
-        homeTitleTextView.text = "Welcome to Smartfit"
-        whatsNewTextView.text = "Check out the latest news from Smartfit!"
 
         // Example: View All Button Logic
         viewAllTextView.setOnClickListener {
