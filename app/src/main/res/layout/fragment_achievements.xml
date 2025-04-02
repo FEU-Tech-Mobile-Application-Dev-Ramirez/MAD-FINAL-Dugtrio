@@ -1,19 +1,250 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AchievementsFragment">
+    tools:context=".ActivityFragment">
 
-    <TextView
-        android:id="@+id/text_achievements"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Achievements"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/Achievements_picture_1"
+            android:layout_width="488dp"
+            android:layout_height="484dp"
+            android:src="@drawable/achievements_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-62dp" />
+
+        <View
+            android:id="@+id/Achievements_shadow_1"
+            android:layout_width="411dp"
+            android:layout_height="352dp"
+            android:layout_marginBottom="539dp"
+            android:background="@drawable/gradient_overlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Achievements_text_1"
+            android:layout_width="337dp"
+            android:layout_height="42dp"
+            android:fontFamily="@font/futura_bold"
+            android:text="TRAIN AND COLLECT"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.052"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/Achievements_text_2"
+            android:layout_width="341dp"
+            android:layout_height="85dp"
+            android:fontFamily="@font/futura"
+            android:text="You did it, now celebrate it. Your workouts will earn you trophies, medals, and badges."
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.079" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Find_a_Workout_btn_1"
+            android:layout_width="144dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="32dp"
+            android:background="@drawable/rounded_corner_transparent_white"
+            android:fontFamily="@font/futura_bold"
+            android:text="Find A Workout"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.129" />
+
+        <TextView
+            android:id="@+id/Achievements_text_3"
+            android:layout_width="204dp"
+            android:layout_height="36dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="All Achievements"
+            android:textColor="@android:color/black"
+            android:textSize="29sp"
+            tools:ignore="MissingConstraints,TextSizeCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="379dp" />
+
+        <ImageView
+            android:id="@+id/Settings_Filter_1"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="346dp"
+            android:layout_marginTop="377dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="476dp"
+            android:src="@drawable/settings_filter_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.851"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/Long_Bar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="124dp"
+            android:src="@drawable/line_horizontal_black_long"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Achievements_text_4"
+            android:layout_width="89dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginEnd="306dp"
+            android:layout_marginBottom="411dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Trophies"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.031"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/Long_Bar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="405dp"
+            android:layout_marginBottom="641dp"
+            android:src="@drawable/line_horizontal_black_long"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Achievements_text_5"
+            android:layout_width="119dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginEnd="306dp"
+            android:layout_marginBottom="411dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Milestones"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.391"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/Achievements_text_6"
+            android:layout_width="222dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginEnd="306dp"
+            android:layout_marginBottom="411dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Workouts in a Week"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.743"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/Long_Bar_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1046dp"
+            android:src="@drawable/line_horizontal_black_long"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/Long_Bar_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="699dp"
+            android:layout_marginBottom="347dp"
+            android:src="@drawable/line_horizontal_black_long"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Achievements_text_7"
+            android:layout_width="93dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1403dp"
+            android:layout_marginEnd="315dp"
+            android:layout_marginBottom="269dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Streaks"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
