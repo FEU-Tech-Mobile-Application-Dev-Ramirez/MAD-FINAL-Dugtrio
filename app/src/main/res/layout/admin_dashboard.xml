@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <!-- Header Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Dashboard"
+        android:textSize="24sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView to show list of users -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="#ffffff"
+        android:elevation="4dp"
+        android:padding="8dp"/>
+
+    <!-- Section to create a new challenge -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Challenge"
+        android:textSize="20sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText for challenge name (default style) -->
+    <EditText
+        android:id="@+id/challengeNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Challenge Name"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText for challenge description (default style) -->
+    <EditText
+        android:id="@+id/challengeDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Challenge Description"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText for challenge points (default style) -->
+    <EditText
+        android:id="@+id/challengePointsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Challenge Points"
+        android:inputType="number"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Button to create a new challenge -->
+    <Button
+        android:id="@+id/createChallengeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Challenge"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4CAF50"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#FF4081"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
