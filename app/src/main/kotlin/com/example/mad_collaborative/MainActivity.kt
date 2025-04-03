@@ -19,6 +19,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mad_collaborative.utils.FirestoreHelper
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -156,7 +157,6 @@ class MainActivity : AppCompatActivity() {
             showSigninPage()
         }
     }
-
     private fun showLoginPage() {
         setContentView(R.layout.login_page)
 
@@ -208,7 +208,18 @@ class MainActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firestoreHelper.loginUser(email, password) { success ->
                     if (success) {
-                        showMainPage()
+                        // Now you need to check if the user is an admin and redirect accordingly
+                        val currentUserId = FirebaseAuth.getInstance().currentUser?.uid
+                        if (currentUserId == "O0sBdBVDJYM49d4EMVJTUNjJDnR2") {
+                            // Admin login - Redirect to AdminDashboardActivity
+                            val intent = Intent(this, AdminDashboardActivity::class.java)
+                            startActivity(intent)
+                        } else {
+                            // Regular user login - Redirect to MainPageActivity
+                            val intent = Intent(this, MainPageActivity::class.java)
+                            startActivity(intent)
+                        }
+                        finish() // Close current activity so the user can't go back to it
                     } else {
                         Toast.makeText(this, "Login failed! Check your credentials.", Toast.LENGTH_SHORT).show()
                     }
@@ -222,6 +233,7 @@ class MainActivity : AppCompatActivity() {
             showSigninPage()
         }
     }
+
 
     private fun showMainPage() {
         val intent = Intent(this, MainPageActivity::class.java)

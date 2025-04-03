@@ -33,6 +33,12 @@
             android:exported="false"
             android:theme="@style/Theme.MADCollaborative" />
 
+        <!-- Add AdminDashboardActivity -->
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MADCollaborative" />
+
     </application>
 
 </manifest>
