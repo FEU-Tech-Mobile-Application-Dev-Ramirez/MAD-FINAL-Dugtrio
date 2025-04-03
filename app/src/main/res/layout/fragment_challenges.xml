@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityFragment">
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +30,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.183" />
+            app:layout_constraintVertical_bias="0.183"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/Challenges_1"
@@ -48,7 +49,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/Challenges_2"
@@ -66,7 +68,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.218"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/Challenge_bookmark_Main"
@@ -83,7 +86,8 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/Challenges_Main_1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.812" />
+            app:layout_constraintVertical_bias="0.812"
+            tools:ignore="ContentDescription" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/Challenge_card1"
@@ -153,7 +157,8 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_marginBottom="50dp"
-                        android:src="@drawable/bookmark_icon" />
+                        android:src="@drawable/bookmark_icon"
+                        tools:ignore="ContentDescription" />
 
                     <RadioButton
                         android:id="@+id/Challenge_Accepted_Button_1"
@@ -240,7 +245,8 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_marginBottom="50dp"
-                        android:src="@drawable/bookmark_icon" />
+                        android:src="@drawable/bookmark_icon"
+                        tools:ignore="ContentDescription" />
 
                     <RadioButton
                         android:id="@+id/Challenge_Accepted_Button_2"
@@ -269,7 +275,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Challenge_card2">
+            app:layout_constraintTop_toBottomOf="@id/Challenge_card2"
+            tools:ignore="TextSizeCheck">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -326,10 +333,272 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_marginBottom="50dp"
-                        android:src="@drawable/bookmark_icon" />
+                        android:src="@drawable/bookmark_icon"
+                        tools:ignore="ContentDescription" />
 
                     <RadioButton
                         android:id="@+id/Challenge_Accepted_Button_3"
+                        android:layout_width="30dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/black"
+                        android:translationY="-40dp"
+                        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 4 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Challenge_card4"
+            android:layout_width="380dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="820dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Challenge_card3"
+            tools:ignore="TextSizeCheck">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/workoutImage4"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/yoga_image2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_toStartOf="@id/bookmark_container4"
+                    android:layout_toEndOf="@id/workoutImage4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/workoutTitle7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mindful Flow: Yoga for Strength"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/workoutDetails8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="All Levels • Flexibility •\nRelaxation •\nYoga Mat Recommended\n20 min"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bookmark_container4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bookmark4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/bookmark_icon"
+                        tools:ignore="ContentDescription" />
+
+                    <RadioButton
+                        android:id="@+id/Challenge_Accepted_Button_4"
+                        android:layout_width="30dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/black"
+                        android:translationY="-40dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 5 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Challenge_card5"
+            android:layout_width="380dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="660dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Challenge_card4"
+            tools:ignore="TextSizeCheck">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/workoutImage5"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sprint_drill1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_toStartOf="@id/bookmark_container5"
+                    android:layout_toEndOf="@id/workoutImage5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/workoutTitle9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sprint Drills: Speed and Stamina"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/workoutDetails10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Advanced • Endurance • Sprint Training\nNo Equipment\n25 min"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bookmark_container5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bookmark5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/bookmark_icon"
+                        tools:ignore="ContentDescription" />
+
+                    <RadioButton
+                        android:id="@+id/Challenge_Accepted_Button_5"
+                        android:layout_width="30dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:buttonTint="@color/black"
+                        android:translationY="-40dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 6 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Challenge_card6"
+            android:layout_width="380dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="500dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Challenge_card5"
+            tools:ignore="TextSizeCheck">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/workoutImage6"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/barbel_workout1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_toStartOf="@id/bookmark_container6"
+                    android:layout_toEndOf="@id/workoutImage6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/workoutTitle11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barbell Power: Strength and Size"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/workoutDetails12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Advanced • Strength •\nBarbell\n45 min"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bookmark_container6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bookmark6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/bookmark_icon"
+                        tools:ignore="ContentDescription" />
+
+                    <RadioButton
+                        android:id="@+id/Challenge_Accepted_Button_6"
                         android:layout_width="30dp"
                         android:layout_height="33dp"
                         android:layout_gravity="center"
@@ -384,6 +653,54 @@
             android:layout_marginTop="651dp"
             android:layout_marginEnd="11dp"
             android:layout_marginBottom="987dp"
+            android:progressDrawable="@drawable/progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.205" />
+
+        <ProgressBar
+            android:id="@+id/Challenge_bar_4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="324dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="-760dp"
+            android:progressDrawable="@drawable/progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.235" />
+
+        <ProgressBar
+            android:id="@+id/challenge_bar_5"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="486dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="-1228dp"
+            android:progressDrawable="@drawable/progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.205" />
+
+        <ProgressBar
+            android:id="@+id/challenge_bar_6"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="651dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="-1375dp"
             android:progressDrawable="@drawable/progress_bar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
