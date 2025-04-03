@@ -23,7 +23,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<ImageView>(R.id.Close_1).setOnClickListener {
+        view.findViewById<ImageView>(R.id.LogoutButton).setOnClickListener {
             Toast.makeText(requireContext(), "Close button clicked", Toast.LENGTH_SHORT).show()
         }
 

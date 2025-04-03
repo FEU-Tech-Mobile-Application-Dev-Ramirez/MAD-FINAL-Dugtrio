@@ -43,34 +43,44 @@
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="46dp" />
 
+
             <TextView
                 android:id="@+id/What_Terms_of_Use1"
                 android:layout_width="248dp"
                 android:layout_height="34dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
+                android:layout_marginEnd="147dp"
+                android:layout_marginBottom="1702dp"
                 android:fontFamily="@font/futura"
                 android:text="What is a Terms of Use?"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Terms_of_Use"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="27dp" />
-
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/What_Terms_of_Use2"
                 android:layout_width="377dp"
                 android:layout_height="352dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="1dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="1349dp"
                 android:fontFamily="@font/futura"
                 android:justificationMode="inter_word"
                 android:text="A Terms of Use agreement (also known as Terms and Conditions or Terms of Service) is a legal document that defines the rules, guidelines, and acceptable use of an application or service. It serves as a contract between the application provider and its users, outlining the rights, responsibilities, and limitations of both parties.\n\nFor Smart Fit, the Terms of Use ensure that users understand the conditions under which they can access and use the application. It provides clear guidelines on how users should interact with the app and establishes the consequences for violating these terms.\n\n By agreeing to the Terms of Use, users acknowledge their understanding of the policies and their commitment to complying with them, ensuring a safe and positive experience for all."
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/What_Terms_of_Use1"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="27dp" />
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/Terms_of_Use1"
