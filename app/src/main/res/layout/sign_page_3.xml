@@ -86,38 +86,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <RadioButton
-            android:id="@+id/radioKg"
+        <RadioGroup
+            android:id="@+id/radioGroupWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
             android:layout_marginTop="316dp"
-            android:layout_marginEnd="268dp"
-            android:layout_marginBottom="527dp"
-            android:fontFamily="@font/futura"
-            android:text="Kilograms (kg)"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.135"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/radioLbs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="143dp"
-            android:layout_marginTop="316dp"
-            android:layout_marginEnd="163dp"
-            android:layout_marginBottom="527dp"
-            android:fontFamily="@font/futura"
-            android:text="Pounds (lbs)"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <RadioButton
+                android:id="@+id/radioKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/futura"
+                android:text="Kilograms (kg)"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/radioLbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Pounds (lbs)"
+                android:textSize="15sp" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/edtAge"
@@ -159,53 +155,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioCm"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="414dp"
-            android:layout_marginEnd="257dp"
-            android:layout_marginBottom="429dp"
-            android:fontFamily="@font/futura"
-            android:text="Centimeters (cm)"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="412dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.298"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/radioFt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="154dp"
-            android:layout_marginTop="414dp"
-            android:layout_marginEnd="179dp"
-            android:layout_marginBottom="429dp"
-            android:fontFamily="@font/futura"
-            android:text="Feet (ft)"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <RadioButton
+                android:id="@+id/radioCm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/futura"
+                android:text="Centimeters (cm)"
+                android:textSize="15sp" />
 
-        <RadioButton
-            android:id="@+id/radioInches"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="232dp"
-            android:layout_marginTop="414dp"
-            android:layout_marginEnd="86dp"
-            android:layout_marginBottom="429dp"
-            android:fontFamily="@font/futura"
-            android:text="Inches (in)"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <RadioButton
+                android:id="@+id/radioFt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/futura"
+                android:text="Feet (ft)"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/radioInches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Inches (in)"
+                android:textSize="15sp" />
+        </RadioGroup>
 
         <TextView
             android:id="@+id/Changeregion"
