@@ -8,21 +8,24 @@
 
     <FrameLayout
         android:id="@+id/frame_layout_2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/ActivityMain_1"
+        android:layout_width="411dp"
+        android:layout_height="715dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/ActivityMain_1">
+
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/ActivityMain_1"
         android:layout_width="97dp"
         android:layout_height="44dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="287dp"
-        android:layout_marginBottom="809dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="298dp"
+        android:layout_marginBottom="817dp"
         android:fontFamily="@font/futura"
         android:gravity="start"
         android:text="Activity"
@@ -30,10 +33,11 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints,TextSizeCheck" />
-
 
     <ImageView
         android:id="@+id/add_workout_icon_1"
@@ -43,16 +47,20 @@
         android:translationX="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033"
+        app:layout_constraintVertical_bias="0.061"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Activity_text_1"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="336dp"
+        android:layout_marginBottom="754dp"
         android:fontFamily="@font/futura"
         android:gravity="start"
         android:text="History"
@@ -61,16 +69,18 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137"
         tools:ignore="MissingConstraints,RtlCompat,TextContrastCheck" />
 
     <TextView
         android:id="@+id/Activity_text_2"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="748dp"
         android:fontFamily="@font/futura"
         android:gravity="start"
         android:text="Achievments"
@@ -79,10 +89,8 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137"
         tools:ignore="MissingConstraints,RtlCompat,TextContrastCheck" />
 
     <TextView
@@ -97,86 +105,11 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137"
         tools:ignore="MissingConstraints,RtlCompat,TextContrastCheck" />
-
-    <ImageView
-        android:id="@+id/activity_workout_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        android:maxWidth="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/activity_workout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ActivityMain_1"
-        app:layout_constraintVertical_bias="1.0"/>
-
-    <View
-        android:id="@+id/activity_workout_2"
-        android:layout_width="421dp"
-        android:layout_height="721dp"
-        android:layout_marginTop="153dp"
-        android:background="@drawable/gradient_overlay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Activity_text_4"
-        android:layout_width="350dp"
-        android:layout_height="82dp"
-        android:fontFamily="@font/futura_bold"
-        android:text="KEEP YOUR TRAINING ON TRACK"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.427"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/Activity_text_5"
-        android:layout_width="326dp"
-        android:layout_height="85dp"
-        android:fontFamily="@font/futura"
-        android:text="Your workouts are recorded here. Tap the plus to add any activities you do outside of the app."
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.531" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Find_a_Workout_btn_1"
-        android:layout_width="153dp"
-        android:layout_height="67dp"
-        android:layout_marginHorizontal="32dp"
-        android:background="@drawable/rounded_corner_transparent_white"
-        android:fontFamily="@font/futura_bold"
-        android:text="Find A Workout"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
