@@ -15,36 +15,66 @@ class FirestoreHelper(private val context: Context) {
     private val auth = FirebaseAuth.getInstance() // Firebase Authentication
 
     // 🔐 Register User with Email & Password
-    fun registerUser(firstName: String, lastName: String, email: String, password: String, onSuccess: (Boolean) -> Unit) {
+    fun registerUser(
+        email: String,
+        password: String,
+        firstName: String = "",
+        lastName: String = "",
+        age: String = "",
+        gender: String = "",
+        region: String = "",
+        onSuccess: (Boolean) -> Unit
+    ) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val userId = auth.currentUser?.uid ?: return@addOnCompleteListener
-                    val user: Map<String, Any> = mapOf(
-                        "firstName" to firstName,
-                        "lastName" to lastName,
+                    val user: MutableMap<String, Any> = mutableMapOf(
                         "email" to email,
                         "userId" to userId
                     )
+
+                    // Add optional fields if provided
+                    if (firstName.isNotEmpty()) user["firstName"] = firstName
+                    if (lastName.isNotEmpty()) user["lastName"] = lastName
+                    if (age.isNotEmpty()) user["age"] = age
+                    if (gender.isNotEmpty()) user["gender"] = gender
+                    if (region.isNotEmpty()) user["region"] = region
 
                     db.collection("users").document(userId)
                         .set(user)
                         .addOnSuccessListener {
                             Log.d("Firestore", "User added with ID: $userId")
                             Toast.makeText(context, "Account Created Successfully!", Toast.LENGTH_SHORT).show()
-                            onSuccess(true) // ✅ Call success callback
+                            onSuccess(true)
                         }
                         .addOnFailureListener { e ->
                             Log.e("Firestore", "Error saving user data", e)
-                            onSuccess(false) // ❌ Call failure callback
+                            onSuccess(false)
                         }
                 } else {
                     Log.e("Auth", "Registration failed", task.exception)
                     Toast.makeText(context, "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                    onSuccess(false) // ❌ Call failure callback
+                    onSuccess(false)
                 }
             }
     }
+
+
+    fun saveUserData(userId: String, userData: Map<String, Any>, onSuccess: (Boolean) -> Unit) {
+        db.collection("users").document(userId)
+            .set(userData)
+            .addOnSuccessListener {
+                Log.d("Firestore", "User data added with ID: $userId")
+                onSuccess(true)  // Data saved successfully
+            }
+            .addOnFailureListener { e ->
+                Log.e("Firestore", "Error saving user data", e)
+                onSuccess(false)  // Error saving data
+            }
+    }
+
+
 
     fun loginUser(email: String, password: String, onSuccess: (Boolean) -> Unit) {
         auth.signInWithEmailAndPassword(email, password)

@@ -20,10 +20,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mad_collaborative.utils.FirestoreHelper
 import com.google.firebase.auth.FirebaseAuth
+import androidx.appcompat.widget.AppCompatButton
+
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var firestoreHelper: FirestoreHelper
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,11 +63,11 @@ class MainActivity : AppCompatActivity() {
     private fun showSigninPage() {
         setContentView(R.layout.signin_page)
 
+        // Apply animation to the signup layout
         val signupLayout = findViewById<LinearLayout>(R.id.signupLayout)
         applySlideAnimation(signupLayout)
 
-        val edtFirstName = findViewById<EditText>(R.id.edtFirstName)
-        val edtLastName = findViewById<EditText>(R.id.edtLastName)
+        // Initialize views for email and password fields
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
         val edtPassword = findViewById<EditText>(R.id.edtPassword)
         val privacyAndTermsTextView = findViewById<TextView>(R.id.PrivacyandTerms)
@@ -71,50 +75,24 @@ class MainActivity : AppCompatActivity() {
         val regionTextView = findViewById<TextView>(R.id.Region)
         val changeRegionTextView = findViewById<TextView>(R.id.Changeregion)
 
-        val fullText = "By continuing, I agree to SmartFit's Privacy Policy and Terms of Use"
-        val privacyPolicy = "Privacy Policy"
-        val termsOfUse = "Terms of Use"
+        // Set up Privacy and Terms links
+        setupPrivacyAndTermsLinks(privacyAndTermsTextView)
 
-        val spannableString = SpannableString(fullText)
-
-        val privacyClick = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                showPrivacyPolicyPage()
-            }
-        }
-
-        val termsClick = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                showTermsOfUsePage()
-            }
-        }
-
-        val privacyStart = fullText.indexOf(privacyPolicy)
-        val privacyEnd = privacyStart + privacyPolicy.length
-        spannableString.setSpan(privacyClick, privacyStart, privacyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        val termsStart = fullText.indexOf(termsOfUse)
-        val termsEnd = termsStart + termsOfUse.length
-        spannableString.setSpan(termsClick, termsStart, termsEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        privacyAndTermsTextView.text = spannableString
-        privacyAndTermsTextView.movementMethod = LinkMovementMethod.getInstance()
-        privacyAndTermsTextView.highlightColor = Color.TRANSPARENT
-
+        // Region change listener
         changeRegionTextView.setOnClickListener {
             showRegionSelectionDialog(regionTextView)
         }
 
+        // Handle sign-up button click (register user and navigate to signin_page_2)
         findViewById<Button>(R.id.btnSignup).setOnClickListener {
-            val firstName = edtFirstName.text.toString().trim()
-            val lastName = edtLastName.text.toString().trim()
             val email = edtEmail.text.toString().trim()
             val password = edtPassword.text.toString().trim()
 
-            if (firstName.isNotEmpty() && lastName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
-                firestoreHelper.registerUser(firstName, lastName, email, password) { success ->
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                firestoreHelper.registerUser(email, password) { success ->
                     if (success) {
-                        showWelcomePage()
+                        // Navigate to signin_page_2 after successful registration
+                        showSigninPage2()
                     } else {
                         Toast.makeText(this, "Registration failed! Try again.", Toast.LENGTH_SHORT).show()
                     }
@@ -124,9 +102,191 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Login link click listener
         findViewById<TextView>(R.id.tvLoginLink).setOnClickListener {
             showLoginPage()
         }
+    }
+
+
+    private fun showSigninPage2() {
+        setContentView(R.layout.signin_page_2)
+
+        val edtFirstName = findViewById<EditText>(R.id.edtFirstName)
+        val edtLastName = findViewById<EditText>(R.id.edtLastName)
+        val edtAge = findViewById<EditText>(R.id.edtAge)
+        val genderRadioGroup = findViewById<RadioGroup>(R.id.genderRadioGroup)
+        val regionTextView = findViewById<TextView>(R.id.Region)
+        val changeRegionTextView = findViewById<TextView>(R.id.Changeregion)
+
+        // Handling region change dialog
+        changeRegionTextView.setOnClickListener {
+            showRegionSelectionDialog(regionTextView)
+        }
+
+        // Handle "Next" button click
+        findViewById<Button>(R.id.btnNext).setOnClickListener {
+            val firstName = edtFirstName.text.toString().trim()
+            val lastName = edtLastName.text.toString().trim()
+            val age = edtAge.text.toString().trim()
+            val genderRadioButtonId = genderRadioGroup.checkedRadioButtonId
+            val gender = if (genderRadioButtonId != -1) {
+                findViewById<RadioButton>(genderRadioButtonId)?.text.toString()
+            } else {
+                "" // No gender selected, return empty or handle it
+            }
+            val region = regionTextView.text.toString().trim()
+
+            // Check if all fields are filled
+            if (firstName.isNotEmpty() && lastName.isNotEmpty() && age.isNotEmpty() && gender.isNotEmpty() && region.isNotEmpty()) {
+                // Use FirestoreHelper to save data
+                val firestoreHelper = FirestoreHelper(this)
+                val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+                if (userId != null) {
+                    val userData = mapOf(
+                        "firstName" to firstName,
+                        "lastName" to lastName,
+                        "age" to age,
+                        "gender" to gender,
+                        "region" to region
+                    )
+
+                    // Save the user data to Firestore
+                    firestoreHelper.saveUserData(userId, userData) { success ->
+                        if (success) {
+                            // Successfully saved data, now navigate to sign_page_3
+                            showSignPage3()
+                        } else {
+                            // Handle failure (e.g., show a Toast)
+                            Toast.makeText(this, "Failed to save data! Try again.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                } else {
+                    Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+        // Handle region change
+        findViewById<TextView>(R.id.Changeregion).setOnClickListener {
+            showRegionSelectionDialog(regionTextView)
+        }
+    }
+
+    private fun showSignPage3() {
+        setContentView(R.layout.sign_page_3)
+
+        val edtWeight: EditText = findViewById(R.id.edtWeight)
+        val edtAge: EditText = findViewById(R.id.edtAge)
+        val edtHeight: EditText = findViewById(R.id.edtHeight)
+        val radioKg: RadioButton = findViewById(R.id.radioKg)
+        val radioLbs: RadioButton = findViewById(R.id.radioLbs)
+        val radioCm: RadioButton = findViewById(R.id.radioCm)
+        val radioFt: RadioButton = findViewById(R.id.radioFt)
+        val radioInches: RadioButton = findViewById(R.id.radioInches)
+        val workoutRadioGroup: RadioGroup = findViewById(R.id.Workout_ratio_RadioGroup)
+        val btnSignup: AppCompatButton = findViewById(R.id.btnSignup)
+
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+        btnSignup.setOnClickListener {
+            val weight = edtWeight.text.toString().trim()
+            val age = edtAge.text.toString().trim()
+            val height = edtHeight.text.toString().trim()
+
+            // Validate fields
+            if (weight.isEmpty() || age.isEmpty() || height.isEmpty()) {
+                Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Get weight and height units
+            val weightUnit = if (radioKg.isChecked) "Kg" else if (radioLbs.isChecked) "Lbs" else "Not Selected"
+            val heightUnit = when {
+                radioCm.isChecked -> "Cm"
+                radioFt.isChecked -> "Ft"
+                radioInches.isChecked -> "Inches"
+                else -> "Not Selected"
+            }
+
+            // Get workout frequency
+            val workoutFrequency = when (workoutRadioGroup.checkedRadioButtonId) {
+                R.id.radioRegular -> "Regular Workouts (3-5 times a week)"
+                R.id.radioOccasional -> "Occasional Workouts (1-2 times a week)"
+                R.id.radioActive -> "Active Lifestyle (Every day or most days)"
+                else -> "Not Selected"
+            }
+
+            // Create a map of user data to store
+            val userData = mapOf(
+                "weight" to weight,
+                "weightUnit" to weightUnit,
+                "age" to age,
+                "height" to height,
+                "heightUnit" to heightUnit,
+                "workoutFrequency" to workoutFrequency
+            )
+
+            // Ensure user is authenticated
+            if (userId != null) {
+                val firestoreHelper = FirestoreHelper(this)
+
+                // Save the user's additional data to Firestore
+                firestoreHelper.saveUserData(userId, userData) { success ->
+                    if (success) {
+                        // Navigate to the welcome page (or main page)
+                        Toast.makeText(this, "Registration Complete!", Toast.LENGTH_SHORT).show()
+                        showWelcomePage() // Redirect to welcome page
+                    } else {
+                        Toast.makeText(this, "Failed to save data! Try again.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } else {
+                Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
+
+
+    private fun setupPrivacyAndTermsLinks(privacyAndTermsTextView: TextView) {
+        val fullText = "By continuing, I agree to SmartFit's Privacy Policy and Terms of Use"
+        val privacyPolicy = "Privacy Policy"
+        val termsOfUse = "Terms of Use"
+
+        val spannableString = SpannableString(fullText)
+
+        // Create clickable span for Privacy Policy
+        val privacyClick = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                showPrivacyPolicyPage()
+            }
+        }
+        // Create clickable span for Terms of Use
+        val termsClick = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                showTermsOfUsePage()
+            }
+        }
+
+        // Apply clickable spans to the text
+        val privacyStart = fullText.indexOf(privacyPolicy)
+        val privacyEnd = privacyStart + privacyPolicy.length
+        spannableString.setSpan(privacyClick, privacyStart, privacyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        val termsStart = fullText.indexOf(termsOfUse)
+        val termsEnd = termsStart + termsOfUse.length
+        spannableString.setSpan(termsClick, termsStart, termsEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        // Set the spannable text to the TextView
+        privacyAndTermsTextView.text = spannableString
+        privacyAndTermsTextView.movementMethod = LinkMovementMethod.getInstance()
+        privacyAndTermsTextView.highlightColor = Color.TRANSPARENT
     }
 
     private fun showRegionSelectionDialog(regionTextView: TextView) {
