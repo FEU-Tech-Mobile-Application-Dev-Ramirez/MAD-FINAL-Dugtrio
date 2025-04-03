@@ -52,6 +52,11 @@ class ActivityFragmentNew : Fragment() {
         rootView.findViewById<TextView>(R.id.Activity_text_3)?.setOnClickListener {
             showChallengesFragment()
         }
+
+        // Handle "Daily Challenges" TextView click - Simulate with Fragment
+        rootView.findViewById<TextView>(R.id.Activity_text_4)?.setOnClickListener {
+            showDailyChallengesFragment()
+        }
     }
 
     private fun showWorkoutListFragment() {
@@ -86,4 +91,18 @@ class ActivityFragmentNew : Fragment() {
         transaction.commit()
     }
 
+    private fun showDailyChallengesFragment() {
+        val dailyChallengesFragment = DailyChallengesFragment()
+        val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_layout_2, DailyChallengesFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+}
+
+private fun FragmentTransaction.replace(
+    i: kotlin.Int,
+    dailyChallengesFragment: com.example.mad_collaborative.DailyChallengesFragment.Companion
+) {
 }

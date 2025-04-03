@@ -16,37 +16,41 @@
         android:translationX="5dp"
         app:layout_constraintBottom_toTopOf="@+id/Profile_Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/Close_1"
-        android:layout_width="30dp"
-        android:layout_height="29dp"
-        android:src="@drawable/close_icon"
-        android:translationX="5dp"
+        android:id="@+id/LogoutButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="353dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="828dp"
+        android:src="@drawable/logout_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/Settings_1"
         android:layout_width="30dp"
         android:layout_height="29dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="331dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="335dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="527dp"
         android:src="@drawable/cog_icon"
-        android:translationX="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/Settings_2"
+        android:translationX="-2.8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/line_1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/qr_code"
@@ -82,12 +86,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="430dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="361dp"
+        android:layout_marginBottom="358dp"
         android:src="@drawable/line_horizontal_black_long"
-        android:translationX="5dp"
+        android:translationX="-8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -105,13 +108,14 @@
         android:textAlignment="center"
         android:textColor="#808080"
         android:textSize="14sp"
+        android:translationX="3dp"
         app:layout_constraintBottom_toBottomOf="@+id/line_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/profile_Name3"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints,TextContrastCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextContrastCheck" />
 
     <TextView
         android:id="@+id/profile_Name3"
@@ -131,7 +135,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextSizeCheck" />
 
     <ImageView
         android:id="@+id/line_3"
@@ -140,9 +144,9 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="534dp"
         android:layout_marginEnd="81dp"
-        android:layout_marginBottom="257dp"
+        android:layout_marginBottom="275dp"
         android:src="@drawable/line_horizontal_black_long"
-        android:translationX="5dp"
+        android:translationX="-5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,18 +158,19 @@
         android:layout_height="30dp"
         android:layout_marginStart="11dp"
         android:layout_marginEnd="335dp"
-        android:layout_marginBottom="314dp"
+        android:layout_marginBottom="310dp"
         android:fontFamily="@font/arial"
         android:gravity="start"
         android:text="0 available"
         android:textAlignment="center"
         android:textColor="#808080"
         android:textSize="14sp"
+        android:translationX="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Smartfit_Rewards"
-        tools:ignore="MissingConstraints,TextContrastCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextContrastCheck" />
 
     <TextView
         android:id="@+id/Smartfit_Rewards"
@@ -185,21 +190,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/line_2"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextSizeCheck" />
 
     <ImageView
         android:id="@+id/Arrow_Right_1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="434dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginStart="363dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="421dp"
         android:src="@drawable/arrow_right_icon"
-        android:translationX="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/arrow_Right_"
+        android:translationX="-5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/line_2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -207,8 +212,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="548dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="48dp"
         android:src="@drawable/arrow_right_icon"
         android:translationX="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/line_3"
@@ -233,7 +238,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextSizeCheck" />
 
     <TextView
         android:id="@+id/Friends"
@@ -242,7 +247,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="633dp"
         android:layout_marginEnd="300dp"
-        android:layout_marginBottom="232dp"
+        android:layout_marginBottom="220dp"
         android:fontFamily="@font/futura"
         android:gravity="start"
         android:text="FRIENDS"
@@ -255,26 +260,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextSizeCheck" />
 
     <TextView
         android:id="@+id/Settings_2"
         android:layout_width="51dp"
         android:layout_height="22dp"
-        android:layout_marginTop="360dp"
-        android:layout_marginBottom="52dp"
         android:fontFamily="@font/futura"
         android:gravity="start"
         android:text="Settings"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/Arrow_Right_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.359"
-        app:layout_constraintStart_toEndOf="@+id/line_1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextSizeCheck"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="364dp" />
 
     <TextView
         android:id="@+id/qr_code_2"
@@ -290,10 +290,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/profile_Name3"
         app:layout_constraintEnd_toStartOf="@+id/line_1"
-        app:layout_constraintHorizontal_bias="0.743"
+        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextSizeCheck" />
 
     <TextView
         android:id="@+id/Profile_Bio"
@@ -312,7 +312,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TextContrastCheck" />
+        tools:ignore="MissingConstraints,RtlCompat,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Edit_Profile_btn"
@@ -327,8 +327,10 @@
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/line_1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -339,7 +341,7 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="175dp"
+        android:layout_marginBottom="165dp"
         android:background="@drawable/rounded_corner_transparent_black"
         android:fontFamily="@font/futura"
         android:text="ADD FRIENDS"
@@ -356,6 +358,6 @@
         android:id="@+id/group7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="Profile,Close_1,Settings_1,qr_code,line_1,line_2,profile_Bio2,profile_Name3,line_3,profile_Bio,Smartfit_Rewards,Arrow_Right_1,arrow_Right_,Profile_Name,Friends,Settings_2,qr_code_2,Profile_Bio,Edit_Profile_btn,Add_Friends_btn" />
+        app:constraint_referenced_ids="Profile,Settings_1,qr_code,line_1,line_2,profile_Bio2,profile_Name3,line_3,profile_Bio,Smartfit_Rewards,Arrow_Right_1,arrow_Right_,Profile_Name,Friends,Settings_2,qr_code_2,Profile_Bio,Edit_Profile_btn,Add_Friends_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
