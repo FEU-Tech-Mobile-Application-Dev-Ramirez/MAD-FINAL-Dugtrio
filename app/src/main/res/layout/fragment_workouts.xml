@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:text="10-Min Bodyweight Burn: Your Third Strength Class"
                         android:textColor="@android:color/black"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView

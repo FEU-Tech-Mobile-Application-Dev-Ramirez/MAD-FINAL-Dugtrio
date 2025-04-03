@@ -6,29 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/Profile"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="365dp"
-        android:src="@drawable/profile_icon"
-        android:translationX="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar_1"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar_1"
-        app:layout_constraintStart_toStartOf="@+id/frame_layout_1"
-        app:layout_constraintTop_toTopOf="@+id/toolbar_1" />
-
     <FrameLayout
         android:id="@+id/frame_layout_1"
         android:layout_width="match_parent"
