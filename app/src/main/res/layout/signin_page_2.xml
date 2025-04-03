@@ -1,17 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/signupLayout"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/placeholder_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Signin Page 2"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="273dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageViewSignup"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="295dp"
+            android:layout_marginBottom="811dp"
+            android:src="@drawable/smartfit_logo_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Enter_Information_1"
+            android:layout_width="364dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="766dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Please Enter Your Information."
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewSignup"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Signup_Description_1"
+            android:layout_width="356dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="695dp"
+            android:fontFamily="@font/futura"
+            android:text="Entering your info personalizes workouts, tracks progress, and provides smart recommendations—all while keeping your data secure."
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="239dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="602dp"
+            android:background="@drawable/rectangle_corner_transparent_black"
+            android:hint="First Name"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#A9A9A9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtLastName"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="301dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="540dp"
+            android:background="@drawable/rectangle_corner_transparent_black"
+            android:hint="Last Name"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#A9A9A9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtAge"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="363dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="478dp"
+            android:background="@drawable/rectangle_corner_transparent_black"
+            android:hint="Age*"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#A9A9A9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Changeregion"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="209dp"
+            android:layout_marginEnd="264dp"
+            android:layout_marginBottom="652dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="@string/underlined_Changeregion_text"
+            android:textAlignment="viewStart"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Region"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="209dp"
+            android:layout_marginEnd="317dp"
+            android:layout_marginBottom="652dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Philippines"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="430dp"
+            android:layout_marginEnd="316dp"
+            android:layout_marginBottom="431dp"
+            android:fontFamily="@font/futura"
+            android:gravity="start"
+            android:text="Gender"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="464dp"
+            android:layout_marginBottom="283dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.112"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/radioPrefer_not_to_say"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Prefer not to say." />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="632dp"
+            android:layout_marginEnd="126dp"
+            android:layout_marginBottom="209dp"
+            android:background="@drawable/rounded_corner_black"
+            android:fontFamily="@font/futura_bold"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
