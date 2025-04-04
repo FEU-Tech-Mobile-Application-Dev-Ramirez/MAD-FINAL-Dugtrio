@@ -21,7 +21,8 @@ import androidx.fragment.app.Fragment
 import com.example.mad_collaborative.utils.FirestoreHelper
 import com.google.firebase.auth.FirebaseAuth
 import androidx.appcompat.widget.AppCompatButton
-
+import com.example.mad_collaborative.utils.User
+import android.content.Context
 
 
 class MainActivity : AppCompatActivity() {
@@ -139,41 +140,30 @@ class MainActivity : AppCompatActivity() {
 
             // Check if all fields are filled
             if (firstName.isNotEmpty() && lastName.isNotEmpty() && age.isNotEmpty() && gender.isNotEmpty() && region.isNotEmpty()) {
-                // Use FirestoreHelper to save data
-                val firestoreHelper = FirestoreHelper(this)
-                val userId = FirebaseAuth.getInstance().currentUser?.uid
+                // Store user data in a temporary model or variable
+                val user = User(
+                    firstName = firstName,
+                    lastName = lastName,
+                    age = age,
+                    gender = gender,
+                    region = region
+                )
 
-                if (userId != null) {
-                    val userData = mapOf(
-                        "firstName" to firstName,
-                        "lastName" to lastName,
-                        "age" to age,
-                        "gender" to gender,
-                        "region" to region
-                    )
+                // Save user data to a global or shared preference for later use
+                val sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("firstName", firstName)
+                editor.putString("lastName", lastName)
+                editor.putString("age", age)
+                editor.putString("gender", gender)
+                editor.putString("region", region)
+                editor.apply()
 
-                    // Save the user data to Firestore
-                    firestoreHelper.saveUserData(userId, userData) { success ->
-                        if (success) {
-                            // Successfully saved data, now navigate to sign_page_3
-                            showSignPage3()
-                        } else {
-                            // Handle failure (e.g., show a Toast)
-                            Toast.makeText(this, "Failed to save data! Try again.", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                } else {
-                    Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
-                }
+                // Navigate to next page
+                showSignPage3()
             } else {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
-        }
-
-
-        // Handle region change
-        findViewById<TextView>(R.id.Changeregion).setOnClickListener {
-            showRegionSelectionDialog(regionTextView)
         }
     }
 
@@ -191,15 +181,20 @@ class MainActivity : AppCompatActivity() {
         val workoutRadioGroup: RadioGroup = findViewById(R.id.Workout_ratio_RadioGroup)
         val btnSignup: AppCompatButton = findViewById(R.id.btnSignup)
 
+        val sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE)
+        val firstName = sharedPreferences.getString("firstName", "")
+        val lastName = sharedPreferences.getString("lastName", "")
+        val age = sharedPreferences.getString("age", "")
+        val gender = sharedPreferences.getString("gender", "")
+        val region = sharedPreferences.getString("region", "")
+
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
         btnSignup.setOnClickListener {
             val weight = edtWeight.text.toString().trim()
-            val age = edtAge.text.toString().trim()
             val height = edtHeight.text.toString().trim()
 
-            // Validate fields
-            if (weight.isEmpty() || age.isEmpty() || height.isEmpty()) {
+            if (weight.isEmpty() || height.isEmpty()) {
                 Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -222,23 +217,25 @@ class MainActivity : AppCompatActivity() {
             }
 
             // Create a map of user data to store
-            val userData = mapOf(
+            val userData: Map<String, Any> = mapOf(
+                "firstName" to (firstName ?: ""),
+                "lastName" to (lastName ?: ""),
+                "age" to (age ?: ""),
+                "gender" to (gender ?: ""),
+                "region" to (region ?: ""),
                 "weight" to weight,
                 "weightUnit" to weightUnit,
-                "age" to age,
                 "height" to height,
                 "heightUnit" to heightUnit,
                 "workoutFrequency" to workoutFrequency
             )
 
-            // Ensure user is authenticated
             if (userId != null) {
                 val firestoreHelper = FirestoreHelper(this)
 
-                // Save the user's additional data to Firestore
+                // Save the user's data to Firestore
                 firestoreHelper.saveUserData(userId, userData) { success ->
                     if (success) {
-                        // Navigate to the welcome page (or main page)
                         Toast.makeText(this, "Registration Complete!", Toast.LENGTH_SHORT).show()
                         showWelcomePage() // Redirect to welcome page
                     } else {
@@ -250,6 +247,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
 
 

@@ -61,48 +61,33 @@ class ActivityFragmentNew : Fragment() {
 
     private fun showWorkoutListFragment() {
         val workoutListFragment = WorkoutListFragment()
-        val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout_2, workoutListFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        replaceFragment(workoutListFragment)
     }
 
     private fun showHistoryFragment() {
         val historyFragment = HistoryFragment()
-        val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout_2, historyFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        replaceFragment(historyFragment)
     }
 
     private fun showAchievementsFragment() {
         val achievementsFragment = AchievementsFragment()
-        val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout_2, achievementsFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        replaceFragment(achievementsFragment)
     }
 
     private fun showChallengesFragment() {
         val challengesFragment = ChallengesFragment()
-        val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout_2, challengesFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        replaceFragment(challengesFragment)
     }
 
     private fun showDailyChallengesFragment() {
-        val dailyChallengesFragment = DailyChallengesFragment()
+        val dailyChallengesFragment = DailyChallengesFragmentNew()
+        replaceFragment(dailyChallengesFragment)
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout_2, DailyChallengesFragment)
+        transaction.replace(R.id.frame_layout_2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
-
-}
-
-private fun FragmentTransaction.replace(
-    i: kotlin.Int,
-    dailyChallengesFragment: com.example.mad_collaborative.DailyChallengesFragment.Companion
-) {
 }

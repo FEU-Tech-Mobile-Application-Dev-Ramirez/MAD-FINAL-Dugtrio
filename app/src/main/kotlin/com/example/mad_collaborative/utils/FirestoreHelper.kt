@@ -9,10 +9,15 @@ import com.example.mad_collaborative.MainPageActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
+
+
+
 class FirestoreHelper(private val context: Context) {
 
     private val db = FirebaseFirestore.getInstance()
     private val auth = FirebaseAuth.getInstance() // Firebase Authentication
+
+
 
     // 🔐 Register User with Email & Password
     fun registerUser(
@@ -59,6 +64,33 @@ class FirestoreHelper(private val context: Context) {
                 }
             }
     }
+    fun createAndAssignChallenge(
+        challengeName: String,
+        challengeDescription: String,
+        challengeType: String,
+        userId: String,
+        onComplete: (Boolean) -> Unit
+    ) {
+        val challengeRef = db.collection("challenges").document()
+        val challengeData = hashMapOf(
+            "id" to challengeRef.id,
+            "name" to challengeName,
+            "description" to challengeDescription,
+            "type" to challengeType,
+            "assignedTo" to userId
+        )
+
+        challengeRef.set(challengeData)
+            .addOnSuccessListener {
+                Log.d("Firestore", "Challenge assigned successfully.")
+                onComplete(true)
+            }
+            .addOnFailureListener { e ->
+                Log.e("Firestore", "Error assigning challenge", e)
+                onComplete(false)
+            }
+    }
+
 
 
     fun saveUserData(userId: String, userData: Map<String, Any>, onSuccess: (Boolean) -> Unit) {

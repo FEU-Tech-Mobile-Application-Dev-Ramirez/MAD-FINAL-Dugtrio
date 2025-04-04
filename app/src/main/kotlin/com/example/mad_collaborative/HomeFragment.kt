@@ -36,7 +36,7 @@ class HomeFragmentNew : Fragment() {
         }
 
         exploreWorkoutBtn.setOnClickListener {
-            val workoutsFragment = WorkoutsFragment()
+            val workoutsFragment = WorkoutsFragmentNew()
             parentFragmentManager.beginTransaction()
                 .replace(R.id.frame_layout_1, workoutsFragment) // Ensure correct container ID
                 .addToBackStack(null)
