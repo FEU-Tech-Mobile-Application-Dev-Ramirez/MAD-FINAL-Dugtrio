@@ -2,9 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout_3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DailyChallengesFragment">
+    tools:context=".DailyChallengesFragmentNew">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,32 +36,14 @@
                 android:text="Daily Challenges"
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@id/Daily_Challenge_1"
+                app:layout_constraintBottom_toTopOf="@id/Daily_Challenge_Card_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.133"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/Daily_Challenge_1"
-                android:layout_width="361dp"
-                android:layout_height="73dp"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="96dp"
-                android:layout_marginEnd="28dp"
-                android:layout_marginBottom="1311dp"
-                android:fontFamily="@font/futura"
-                android:gravity="start"
-                android:text="Each day offers a new challenge to improve your well-being, from workouts to mindfulness. Stay committed and build strength and positive habits!"
-                android:textColor="@android:color/white"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
+            <!-- Placeholder for Challenge 1 -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Daily_Challenge_Card_1"
                 android:layout_width="match_parent"
@@ -64,14 +53,13 @@
                 app:cardElevation="6dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Daily_Challenge_1">
+                app:layout_constraintTop_toBottomOf="@id/Main_Daily_Challenge_1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- Image Background -->
                     <ImageView
                         android:id="@+id/Daily_Challenge_image1"
                         android:layout_width="match_parent"
@@ -80,7 +68,6 @@
                         android:src="@drawable/fitness_challenge1"
                         tools:ignore="ContentDescription" />
 
-                    <!-- Text Container -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -93,7 +80,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/futura"
-                            android:text="Daily Challenge Name"
+                            android:text="Challenge Title 1"
                             android:textColor="@android:color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -103,7 +90,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Daily Challenge Description"
+                            android:text="Challenge Description 1"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
 
@@ -112,15 +99,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
-                            android:text="Daily Challenge Type"
+                            android:text="Challenge Type 1"
                             android:textColor="@android:color/white"
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
-            <!-- Second CardView -->
+            <!-- Placeholder for Challenge 2 -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Daily_Challenge_Card_2"
                 android:layout_width="match_parent"
@@ -137,7 +123,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- Image Background -->
                     <ImageView
                         android:id="@+id/Daily_Challenge_image2"
                         android:layout_width="match_parent"
@@ -145,7 +130,6 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/fitness_challenge2" />
 
-                    <!-- Text Container -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -158,7 +142,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/futura"
-                            android:text="Daily Challenge Name"
+                            android:text="Challenge Title 2"
                             android:textColor="@android:color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -168,7 +152,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Daily Challenge Description"
+                            android:text="Challenge Description 2"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
 
@@ -177,15 +161,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
-                            android:text="Daily Challenge Type"
+                            android:text="Challenge Type 2"
                             android:textColor="@android:color/white"
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
-            <!-- Third CardView -->
+            <!-- Placeholder for Challenge 3 -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Daily_Challenge_Card_3"
                 android:layout_width="match_parent"
@@ -202,7 +185,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- Image Background -->
                     <ImageView
                         android:id="@+id/Daily_Challenge_image3"
                         android:layout_width="match_parent"
@@ -210,7 +192,6 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/fitness_challenge3" />
 
-                    <!-- Text Container -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -223,7 +204,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/futura"
-                            android:text="Daily Challenge Name"
+                            android:text="Challenge Title 3"
                             android:textColor="@android:color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -233,7 +214,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:text="Daily Challenge Description"
+                            android:text="Challenge Description 3"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
 
@@ -242,12 +223,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
-                            android:text="Daily Challenge Type"
+                            android:text="Challenge Type 3"
                             android:textColor="@android:color/white"
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

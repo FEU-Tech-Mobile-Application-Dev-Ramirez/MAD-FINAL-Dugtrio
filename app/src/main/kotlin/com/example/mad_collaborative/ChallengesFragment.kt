@@ -68,7 +68,7 @@ class ChallengesFragment : Fragment(R.layout.fragment_challenges) {
         // Set listeners for RadioButtons
         challengeAcceptedButton1.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                progress1 += 10  // Example progress increment
+                progress1 += 100  // Example progress increment
                 progressBar1.progress = progress1
                 bookmark1.setImageResource(R.drawable.bookmark_filled_icon) // Update bookmark icon
             }
@@ -76,7 +76,7 @@ class ChallengesFragment : Fragment(R.layout.fragment_challenges) {
 
         challengeAcceptedButton2.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                progress2 += 10
+                progress2 += 100
                 progressBar2.progress = progress2
                 bookmark2.setImageResource(R.drawable.bookmark_filled_icon)
             }
@@ -84,7 +84,7 @@ class ChallengesFragment : Fragment(R.layout.fragment_challenges) {
 
         challengeAcceptedButton3.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                progress3 += 10
+                progress3 += 100
                 progressBar3.progress = progress3
                 bookmark3.setImageResource(R.drawable.bookmark_filled_icon)
             }
@@ -92,7 +92,7 @@ class ChallengesFragment : Fragment(R.layout.fragment_challenges) {
 
         challengeAcceptedButton4.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                progress4 += 10
+                progress4 += 100
                 progressBar4.progress = progress4
                 bookmark4.setImageResource(R.drawable.bookmark_filled_icon)
             }
@@ -100,7 +100,7 @@ class ChallengesFragment : Fragment(R.layout.fragment_challenges) {
 
         challengeAcceptedButton5.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                progress5 += 10
+                progress5 += 100
                 progressBar5.progress = progress5
                 bookmark5.setImageResource(R.drawable.bookmark_filled_icon)
             }
@@ -108,7 +108,7 @@ class ChallengesFragment : Fragment(R.layout.fragment_challenges) {
 
         challengeAcceptedButton6.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                progress6 += 10
+                progress6 += 100
                 progressBar6.progress = progress6
                 bookmark6.setImageResource(R.drawable.bookmark_filled_icon)
             }
