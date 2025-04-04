@@ -31,7 +31,9 @@
             android:id="@+id/Signupline"
             android:layout_width="314dp"
             android:layout_height="93dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="106dp"
+            android:layout_marginEnd="61dp"
             android:layout_marginBottom="692dp"
             android:fontFamily="@font/futura"
             android:gravity="start"
@@ -41,9 +43,8 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.371"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewSignup"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -88,10 +89,12 @@
 
         <EditText
             android:id="@+id/edtEmail"
-            android:layout_width="0dp"
+            android:layout_width="347dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="32dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="255dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginBottom="586dp"
             android:background="@drawable/rectangle_corner_transparent_black"
             android:hint="Email*"
@@ -106,11 +109,13 @@
 
         <EditText
             android:id="@+id/edtPassword"
-            android:layout_width="0dp"
+            android:layout_width="347dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="524dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="315dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="526dp"
             android:background="@drawable/rectangle_corner_transparent_black"
             android:hint="Password"
             android:inputType="textPassword"
@@ -121,16 +126,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edtEmail"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/ConfirmPassword"
-            android:layout_width="0dp"
+            android:layout_width="347dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="478dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="375dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="466dp"
             android:background="@drawable/rectangle_corner_transparent_black"
             android:hint="Confirm Password"
             android:inputType="textPassword"
@@ -141,51 +147,33 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtPassword"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSignup"
-            android:layout_width="160dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginStart="123dp"
-            android:layout_marginTop="630dp"
-            android:layout_marginEnd="124dp"
-            android:layout_marginBottom="257dp"
-            android:background="@drawable/rounded_corner_black"
-            android:fontFamily="@font/futura_bold"
-            android:text="NEXT"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvLoginLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="436dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="463dp"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="408dp"
             android:text="@string/underlined_tvLoginLink_text"
             android:textColor="#808080"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ConfirmPassword"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/PrivacyandTerms"
             android:layout_width="237dp"
             android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="356dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="519dp"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="324dp"
             android:clickable="true"
             android:focusable="true"
             android:text="@string/underlined_PrivacyandTerms_text"
@@ -193,11 +181,31 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLoginLink"
-            app:layout_constraintVertical_bias="0.937"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignup"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="574dp"
+            android:layout_marginEnd="126dp"
+            android:layout_marginBottom="267dp"
+            android:background="@drawable/rounded_corner_black"
+            android:fontFamily="@font/futura_bold"
+            android:text="NEXT"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

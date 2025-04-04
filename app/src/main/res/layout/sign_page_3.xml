@@ -31,7 +31,9 @@
             android:id="@+id/Enter_Vitals_1"
             android:layout_width="364dp"
             android:layout_height="41dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="766dp"
             android:fontFamily="@font/futura"
             android:gravity="start"
@@ -41,9 +43,8 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewSignup"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -53,17 +54,15 @@
             android:layout_marginStart="23dp"
             android:layout_marginTop="125dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="695dp"
+            android:layout_marginBottom="683dp"
             android:fontFamily="@font/futura"
             android:text="Entering your vitals is essential for accurate fitness tracking and personalized recommendations. It helps tailor workouts, monitor progress, and ensure safe, effective training based on your body’s needs."
             android:textColor="#808080"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             tools:ignore="HardcodedText" />
 
         <EditText
@@ -90,10 +89,13 @@
             android:id="@+id/radioGroupWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
             android:layout_marginTop="316dp"
+            android:layout_marginEnd="147dp"
+            android:layout_marginBottom="527dp"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.135"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -159,10 +161,13 @@
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
             android:layout_marginTop="412dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="431dp"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.298"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -306,8 +311,10 @@
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
