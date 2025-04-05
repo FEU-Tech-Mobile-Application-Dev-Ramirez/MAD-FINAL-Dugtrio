@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
@@ -14,7 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class ProfileFragmentNew : Fragment() {
 
     private lateinit var tvUserName: TextView
-    private lateinit var btnLogout: Button
+    private lateinit var btnLogout: ImageView
     private val auth = FirebaseAuth.getInstance()
     private val db = FirebaseFirestore.getInstance()
 

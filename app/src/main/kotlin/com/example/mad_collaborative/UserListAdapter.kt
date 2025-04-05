@@ -19,7 +19,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = users[position]
-        holder.bind(user)
+        holder.bind(user, position)
     }
 
     override fun getItemCount(): Int = users.size
@@ -37,7 +37,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
     }
 
     inner class UserViewHolder(private val binding: UserItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(user: User) {
+        fun bind(user: User, position: Int) {
             // Display user's name
             binding.userCheckBox.text = "${user.firstName} ${user.lastName}"
 
@@ -46,17 +46,27 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
 
             // Set up the checkbox listener to manage selection/deselection
             binding.userCheckBox.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked) {
-                    selectedUser = user
-                } else {
-                    // Deselect the user if this checkbox is unchecked
-                    if (selectedUser == user) {
-                        selectedUser = null
-                    }
-                }
 
-                // Notify the adapter to update the item
-                notifyDataSetChanged() // Update the entire list to handle UI consistency
+                // Use post to update the RecyclerView after layout pass
+                binding.root.post {
+                    if (isChecked) {
+                        // If a user is selected, deselect the previous selection
+                        if (selectedUser != user) {
+                            val previousSelectedUser = selectedUser
+                            selectedUser = user
+                            // Notify the previous item to change its state
+                            previousSelectedUser?.let { notifyItemChanged(users.indexOf(it)) }
+                        }
+                    } else {
+                        // Deselect user
+                        if (selectedUser == user) {
+                            selectedUser = null
+                        }
+                    }
+
+                    // Update the current user position
+                    notifyItemChanged(position) // Only update the clicked item
+                }
             }
         }
     }

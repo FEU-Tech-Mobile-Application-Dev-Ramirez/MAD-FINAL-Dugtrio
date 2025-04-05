@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mad_collaborative.databinding.FragmentDailyChallengesBinding
 import com.example.mad_collaborative.utils.Challenge
+import androidx.recyclerview.widget.LinearLayoutManager
+
 
 class DailyChallengesFragmentNew : Fragment() {
 
@@ -38,10 +39,7 @@ class DailyChallengesFragmentNew : Fragment() {
         if (challenges != null && challenges.isNotEmpty()) {
             challengeListAdapter.submitList(challenges)
         } else {
-            // If no challenges, display a message
-            // You can also handle empty state by showing a placeholder message
-            // binding.recyclerView.visibility = View.GONE
-            // binding.emptyStateTextView.visibility = View.VISIBLE
+            // Handle empty state if necessary
         }
     }
 
@@ -57,3 +55,4 @@ class DailyChallengesFragmentNew : Fragment() {
         }
     }
 }
+

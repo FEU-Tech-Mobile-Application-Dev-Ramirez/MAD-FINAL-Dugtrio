@@ -84,7 +84,6 @@ class AdminDashboardActivity : AppCompatActivity() {
             }
     }
 
-    // Create multiple challenges and store them in Firestore
     private fun createChallenges(name: String, description: String, category: String) {
         val challenges = mutableListOf<Challenge>()
 
@@ -120,8 +119,7 @@ class AdminDashboardActivity : AppCompatActivity() {
             assignChallengesToUser(selectedUser, challenges)
         } else {
             Log.e("AdminDashboardActivity", "No user selected!")
-            Toast.makeText(this, "No user selected to assign challenges", Toast.LENGTH_SHORT)
-                .show()
+            Toast.makeText(this, "No user selected to assign challenges", Toast.LENGTH_SHORT).show()
         }
 
         // Pass the list of challenges to the fragment
@@ -134,10 +132,10 @@ class AdminDashboardActivity : AppCompatActivity() {
                 .commit()
         } catch (e: Exception) {
             Log.e("AdminDashboardActivity", "Fragment transaction error: ${e.message}")
+            e.printStackTrace()
         }
     }
 
-    // Assign multiple challenges to a specific user
     private fun assignChallengesToUser(user: User, challenges: List<Challenge>) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
@@ -181,5 +179,6 @@ class AdminDashboardActivity : AppCompatActivity() {
             Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
 
