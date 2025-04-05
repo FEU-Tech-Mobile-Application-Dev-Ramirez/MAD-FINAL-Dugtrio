@@ -64,11 +64,11 @@ class MainActivity : AppCompatActivity() {
     private fun showSigninPage() {
         setContentView(R.layout.signin_page)
 
-        // Apply animation to the signup layout
+
         val signupLayout = findViewById<LinearLayout>(R.id.signupLayout)
         applySlideAnimation(signupLayout)
 
-        // Initialize views for email and password fields
+
         val edtEmail = findViewById<EditText>(R.id.edtEmail)
         val edtPassword = findViewById<EditText>(R.id.edtPassword)
         val privacyAndTermsTextView = findViewById<TextView>(R.id.PrivacyandTerms)
@@ -76,15 +76,15 @@ class MainActivity : AppCompatActivity() {
         val regionTextView = findViewById<TextView>(R.id.Region)
         val changeRegionTextView = findViewById<TextView>(R.id.Changeregion)
 
-        // Set up Privacy and Terms links
+
         setupPrivacyAndTermsLinks(privacyAndTermsTextView)
 
-        // Region change listener
+
         changeRegionTextView.setOnClickListener {
             showRegionSelectionDialog(regionTextView)
         }
 
-        // Handle sign-up button click (register user and navigate to signin_page_2)
+        //Handle sign-up button click (register user and navigate to signin_page_2)
         findViewById<Button>(R.id.btnSignup).setOnClickListener {
             val email = edtEmail.text.toString().trim()
             val password = edtPassword.text.toString().trim()
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firestoreHelper.registerUser(email, password) { success ->
                     if (success) {
-                        // Navigate to signin_page_2 after successful registration
+
                         showSigninPage2()
                     } else {
                         Toast.makeText(this, "Registration failed! Try again.", Toast.LENGTH_SHORT).show()
@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Login link click listener
+        //Login link click listener
         findViewById<TextView>(R.id.tvLoginLink).setOnClickListener {
             showLoginPage()
         }
@@ -366,18 +366,15 @@ class MainActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firestoreHelper.loginUser(email, password) { success ->
                     if (success) {
-                        // Now you need to check if the user is an admin and redirect accordingly
                         val currentUserId = FirebaseAuth.getInstance().currentUser?.uid
                         if (currentUserId == "O0sBdBVDJYM49d4EMVJTUNjJDnR2") {
-                            // Admin login - Redirect to AdminDashboardActivity
                             val intent = Intent(this, AdminDashboardActivity::class.java)
                             startActivity(intent)
                         } else {
-                            // Regular user login - Redirect to MainPageActivity
                             val intent = Intent(this, MainPageActivity::class.java)
                             startActivity(intent)
                         }
-                        finish() // Close current activity so the user can't go back to it
+                        finish()
                     } else {
                         Toast.makeText(this, "Login failed! Check your credentials.", Toast.LENGTH_SHORT).show()
                     }

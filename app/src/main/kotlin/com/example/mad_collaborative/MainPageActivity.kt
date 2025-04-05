@@ -26,7 +26,7 @@ class MainPageActivity : AppCompatActivity() {
                 R.id.workouts -> loadFragment(WorkoutsFragmentNew())  // WorkoutsFragment
                 R.id.activity -> loadFragment(ActivityFragmentNew())  // ActivityFragment
                 R.id.programs -> loadFragment(ProgramsFragmentNew())  // ProfileFragment
-                R.id.profile -> loadFragment(ProfileFragment())  // ProfileFragment
+                R.id.profile -> loadFragment(ProfileFragmentNew())  // ProfileFragment
                 else -> false
             }
             true
